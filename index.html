@@ -7,8 +7,18 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div class="squareContainer"></div>
-    
+    <div class="container">
+        <div class="buttonsContainer">
+            <input type="color" class="cellColor" name="color" value="#000000"/>
+            <p id="sliderValue">28 X 28</p>
+            <input type="range" min="8" max="64" value="28" class="slider" id="myRange">
+            <button id="random" onClick="randomColor()">RANDOM COLOR</button>
+            <button id="erase" onClick="erase()">ERASER</button>
+            <button id="reset" onClick="window.location.reload()">RESET</button>
+        </div>
+        <div class="squareContainer"></div>
+    </div>
+  
 </body>
 <script src="script.js"></script>
 </html>
