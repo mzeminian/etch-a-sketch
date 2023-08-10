@@ -1,20 +1,26 @@
 //Variables Declaration
 const squareContainer = document.querySelector('.squareContainer');
 console.log(squareContainer);
-var divsNumber = 16 * 16;
+var divsNumber = 32;
 
 //Function that creates squares
 
 function createDivs(divsNumber, squareContainer){
     const container = squareContainer;
     let squares = divsNumber;
-    for(let i = 0; i <= squares; i++){
+    let size = container.clientWidth / squares;
+    for(let i = 0; i < squares*squares; i++){
         const div = document.createElement('div'); 
-        div.classList.add('square');     
-        container.appendChild(div);   
-        console.log("I am creating the div number: " + i);                           
+        div.classList.add('square'); 
+        div.style.width = size + "px";
+        div.style.height = size + "px";    
+        container.appendChild(div);                          
     }
 }
+
+//Function to turn cell colour black
+
+
 
 //Function starts when the page is loaded
 
