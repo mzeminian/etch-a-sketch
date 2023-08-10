@@ -6,7 +6,35 @@ body{
     height: 800px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: rgb(255, 217, 0);
+    font-family: 'Lilita One', serif;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 72px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
 .container{
@@ -15,6 +43,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
 .buttonsContainer{
@@ -78,7 +107,8 @@ button{
     cursor: pointer;
     box-shadow: 1px 1px 2px #7a7a7a;
     font-size: 14px;
-    font-weight: 800;
+    font-family: 'Lilita One', serif;
+
 }
 
 button:hover{
